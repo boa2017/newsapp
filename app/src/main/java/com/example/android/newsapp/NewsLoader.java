@@ -1,7 +1,7 @@
 package com.example.android.newsapp;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
 import java.io.IOException;
@@ -14,8 +14,11 @@ import java.util.List;
 
 public class NewsLoader extends AsyncTaskLoader<List<News>> {
 
-    public NewsLoader(Context context) {
+    private String url;
+
+    public NewsLoader(Context context, String url) {
         super(context);
+        this.url = url;
     }
 
     @Override

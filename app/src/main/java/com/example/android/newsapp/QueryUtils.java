@@ -37,7 +37,7 @@ public class QueryUtils {
                 .appendQueryParameter("show-references", "author")
                 .appendQueryParameter("show-elements", "image")
                 .appendQueryParameter("show-tags", "contributor")
-                .appendQueryParameter("q", "Europe")
+                //.appendQueryParameter("q", "Europe")
                 .appendQueryParameter("api-key", "49f1dd7e-749e-4d4f-9189-674d2cb7a6e8");
         String url = builder.build().toString();
         return url;
@@ -70,7 +70,7 @@ public class QueryUtils {
     static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = "";
 
-        if (url == null){
+        if (url == null) {
             return jsonResponse;
         }
         HttpURLConnection urlConnection = null;
@@ -78,11 +78,11 @@ public class QueryUtils {
 
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("GET");
             urlConnection.setReadTimeout(10000 /* milliseconds */);
             urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.setRequestMethod("GET");
             urlConnection.connect();
-            if (urlConnection.getResponseCode() == 200){
+            if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
@@ -116,7 +116,7 @@ public class QueryUtils {
     }
 
     static List<News> parseJson(String response) {
-        ArrayList<News> listOfNews = new ArrayList<>();
+        List<News> listOfNews = new ArrayList<>();
         try {
             JSONObject jsonResponse = new JSONObject(response);
             JSONObject jsonResults = jsonResponse.getJSONObject("response");

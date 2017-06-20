@@ -8,16 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
+
     <style name="cover">
         <item name="android:padding">16dp</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
+
     <style name="title" parent="Base.TextAppearance.AppCompat.Large">
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
 
     </style>
 
@@ -25,17 +30,65 @@
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="date" parent="Base.TextAppearance.AppCompat.Small">
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="section" parent="Base.TextAppearance.AppCompat.Small">
         <item name="android:gravity">right</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+
     </style>
+
+    <style name="swipeRefresh">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="listView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="relativeLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="linearLayout1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="linearLayout2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TextEmptyView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
 </resources>
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by beita on 19/06/2017.
@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class NewsAdapter extends ArrayAdapter<News> {
 
-    public NewsAdapter(Context context) {
-        super(context, -1, new ArrayList<News>());
+    public NewsAdapter(Context context, List<News> listNews) {
+        super(context, 0, listNews);
     }
 
     @Override
